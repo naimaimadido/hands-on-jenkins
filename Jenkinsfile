@@ -7,7 +7,7 @@ pipeline {
       }
     }
 
-    stage('Test Firefox') {
+    stage('Test') {
       parallel {
         stage('Test Firefox') {
           steps {
@@ -17,7 +17,7 @@ pipeline {
 
         stage('Test Chrome') {
           steps {
-            bat 'echo \'Testing chrome\''
+            bat 'echo \'Testing chrome\'; exit 1'
           }
         }
 
